@@ -3,7 +3,7 @@
 ## 0. 배포하기
 
 - ftp : File Transfer Protocol
-- http : HyperText Markup Transfer Protocol
+- http : Hypertext Markup Transfer Protocol
 - smtp : Simple mail Transfer Protocol
 - [파일질라](https://filezilla-project.org/)
 - [무료웹호스팅](https://www.dothome.co.kr/)
@@ -50,5 +50,21 @@
     background-size: cover;
   }
   ```
+- flex 를 활용시 참고 사항
+  : 기본적으로 flex 를 적용하면 줄내림은 없다.
 
+  ```css
+  .box {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  ```
 
+  : 필요시 100% 넘는 item 들이 있으면 줄내림 하려면
+
+  ```css
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ```

@@ -1,43 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카카오브레인 Blog</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- 전체 레이아웃 -->
+    <div class="wrap">
+      <!-- 상단 레이아웃 -->
+      <header class="header">
+        <div class="inner">
+          <!-- 상단 로고 -->
+          <div class="header-logo">
+            <a href="index.html" class="header-logo-link">
+              <img src="./images/etc/logo-kakao.png" alt="카카오브레인 블로그" class="header-logo-img" />
+              <!-- start 로고 슬라이드 -->
+              <div class="header-logo-slide" id="logo-slide">
+                <img src="./images/etc/logo-blog01.png" alt="카카오브레인 블로그" />
+              </div>
+              <!-- end 로고 슬라이드 -->
+            </a>
+          </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          <!-- 상단 메뉴 -->
+          <nav class="header-navi">
+            <ul class="navi-list">
+              <li><a href="#">소식</a></li>
+              <li><a href="#">팀&크루</a></li>
+              <li><a href="#">영입</a></li>
+              <li class="navi-search">
+                <a href="#"></a>
+              </li>
+              <li class="mobile-menu">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- 메인 레이아웃 -->
+      <main class="main">
+        <div class="inner">
+          <!-- 메인 상단 -->
+          <div class="main-top">
+            <!-- 슬라이드 -->
+            <div class="main-top-slide br-20">
+              <a href="#"></a>
+            </div>
+            <!-- 타이틀 배너 -->
+            <div class="main-top-banner br-20">
+              <a href="#"> </a>
+            </div>
+          </div>
+          <!-- 메인 하단 -->
+          <div class="main-bottom">
+            <!-- 메인 리스트 영역 -->
+            <div class="main-bottom-list">
+              <!-- 새글 리스트 -->
+              <div class="main-bottom-list-news"></div>
+              <!-- 배너 -->
+              <div class="main-bottom-list-banner"></div>
+              <!-- 추천글 리스트 -->
+              <div class="main-bottom-list-picks"></div>
+            </div>
+            <!-- 메인 카드 영역 -->
+            <div class="main-bottom-cards">
+              <!-- 카드 슬라이드 -->
+              <div class="main-bottom-cards-slide"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- 하단 레이아웃 -->
+      <footer class="footer">
+        <!-- 하단 사이트 정보 및 사이트 맵 -->
+        <div class="footer-top">
+          <!-- 회사소개 -->
+          <div class="footer-top-info"></div>
+          <!-- 사이트맵 -->
+          <div class="footer-top-sitemap"></div>
+        </div>
+        <!-- 하단 카피라이터 및 SNS 링크 -->
+        <div class="footer-bottom">
+          <!-- 카피라이터 -->
+          <div class="footer-bottom-copyright"></div>
+          <!-- SNS 목록 -->
+          <div class="footer-bottom-sns"></div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
