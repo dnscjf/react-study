@@ -68,3 +68,26 @@
     flex-wrap: wrap;
   }
   ```
+
+- 효과 CSS3
+  : [css box-shadow generator 검색](https://cssgenerator.org/box-shadow-css-generator.html)
+  : [css filter](https://developer.mozilla.org/ko/docs/Web/CSS/filter)
+  : `transition: 속성명 시간초 시간효과 지연시간`
+
+```css
+ .list-box-img {
+    width: 100%;
+    height: 17.09vw;
+    max-height: 200px;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    transition: all 0.2s ease-in;
+  }
+
+  .list-box:hover .list-box-img {
+    transform: translateY(-10px);
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.2));
+}
+```
+
