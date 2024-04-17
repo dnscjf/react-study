@@ -1,0 +1,261 @@
+.main {
+}
+.main .inner {
+  display: block;
+  height: auto;
+}
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+.main-top-slide {
+  width: 65.81%;
+  max-width: 770px;
+
+  height: 40.17vw;
+  max-height: 470px;
+
+  overflow: hidden;
+}
+
+.topslide {
+  width: 100%;
+  height: 100%;
+}
+
+.main-top-slide a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 40px;
+
+  width: 100%;
+  height: 100%;
+  background: url("../images/b1.png") no-repeat center;
+  background-size: cover;
+}
+
+.main-top-banner {
+  width: 31.62%;
+  max-width: 370px;
+
+  height: 40.17vw;
+  max-height: 470px;
+
+  overflow: hidden;
+}
+
+.main-top-banner a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 40px;
+
+  width: 100%;
+  height: 100%;
+  background: url("../images/br.png") no-repeat center;
+  background-size: cover;
+}
+
+.slide-title {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .main-top-slide {
+    width: 100%;
+    max-width: 100%;
+
+    height: 100vw;
+    max-height: 1240px;
+  }
+
+  .main-top-banner {
+    display: none;
+  }
+}
+
+.main-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 60px;
+}
+.main-bottom h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.list-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 2.56%;
+  margin-bottom: 60px;
+}
+
+.list-box {
+  display: block;
+  width: 30%;
+
+  margin-bottom: 30px;
+}
+
+.list-box:hover .list-box-img {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.2));
+}
+
+.list-box-img {
+  width: 100%;
+  height: 17.09vw;
+  max-height: 200px;
+  overflow: hidden;
+  margin-bottom: 24px;
+
+  transition: all 0.2s ease-in;
+}
+
+.list-box-cate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+.list-box-cate img {
+  width: 24px;
+  height: 24px;
+}
+.list-box-cate span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e700a7;
+}
+
+.list-box-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 20px;
+  word-break: keep-all;
+  line-height: 28px;
+}
+
+.list-box-day {
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.main-bottom-list {
+  width: 71.79%;
+  max-width: 840px;
+}
+.main-bottom-list-news {
+}
+.main-bottom-list-banner {
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.list-banner-link {
+  display: block;
+  width: 100%;
+  height: 160px;
+  background: #031efb url("../images/1pc.png") no-repeat center;
+  background-size: 100%;
+}
+.main-bottom-list-picks {
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .main-bottom {
+    flex-wrap: wrap;
+  }
+  .main-bottom-list {
+    width: 100%;
+    max-width: 100%;
+  }
+  .list-box {
+    width: 100%;
+  }
+  .list-box-img {
+    height: 74.21vw;
+    max-height: 760px;
+  }
+
+  .main-bottom-cards {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.main-bottom-cards {
+  width: 25.64%;
+  max-width: 300px;
+}
+
+.card-link {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 330px;
+  background: url("../images/p1.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 30px;
+
+  overflow: hidden;
+
+  /* 배치된 내용의 좌표(x, y) 가 이동한다. */
+  transition: all 0.2s ease-in;
+}
+.card-link:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.2));
+}
+
+.card-txt {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.card-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.card-count {
+  display: block;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-left: 3px;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .main-bottom-cards {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-link {
+    width: 240px;
+    height: 266px;
+  }
+}

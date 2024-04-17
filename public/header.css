@@ -30,10 +30,19 @@
   margin-right: 5px;
 }
 .header-logo-slide {
-}
-.header-logo-slide img {
   width: 68px;
   height: 31px;
+}
+.swlogo {
+  width: 100%;
+  height: 100%;
+}
+.swlogo .swiper-slide {
+  background: #ffffff;
+}
+
+.header-logo-slide img {
+  width: 100%;
 }
 .header-navi {
 }
