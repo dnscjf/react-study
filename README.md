@@ -409,3 +409,97 @@ window.addEventListener("load", function () {
   }
   ```
 
+# js 4장
+
+- var 변수명 = 변수값;
+- let 변수명 = 변수값;
+- const 변수명 = 변수값;
+
+```txt
+호이스팅(hoisting) 은 변수, 함수를 선언하지 않았는데도 사용할 수 있음.
+(hoisting이 일어나지 않도록 주의: var 쓰지 말자.)
+```
+
+# css의 opacity와 position의 이해
+
+- opacity는 DOM의 내용까지도 투명도가 적용된다.
+- position
+
+# css 의 opacity 와 position 의 이해.
+
+- opacity 는 DOM의 내용까지도 투명도가 적용된다.
+- position
+: position 중에 aboslute로 픽셀 위치 설정의 경우 주의
+: 반드시 position 코드가 바깥 영역에도 있어야 합니다.
+: position 중에 fixed는 웹 브라우저를 기준으로 배치
+: fixed는 반드시 left, top, right, bottom 을 주자
+: fixed 는 보통 z-index 를 준다.
+: fixed 는 높이에 반영이 안되므로 주의하자.(레이아웃 배치 문제)
+
+```css
+대상 {
+  position: relative;
+}
+대상 {
+  position: relative;
+}
+```
+
+# js 윈도우 스크롤의 위치를 알아내기
+
+```js
+window.addEventLinstenr("scoll", function () {
+  // 하고 싶은 일
+});
+```
+
+```js
+window.addEventLinstenr("scoll", function () {
+  // 스크롤바의 위치
+  const scY = window.scrollY;
+});
+```
+
+# js 로 css 의 클래스 동적으로 활용하기
+
+```js
+// DOM 찾아서 변수로 레퍼런스 하기
+const tags = document.querySelector(".클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 추가
+tags.classList.add("클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 제거
+tags.classList.remove("클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 추가 / 제거
+tags.classList.toggle("클래스명");
+// DOM 을 이용해서 선택한 곳에 적용된 css 클래스 목록 포함여부
+tags.classList.contain("클래스명");
+```
+
+# js 의 함수란? 1번
+
+- 동일한 코드가 2번 이상 반복되면 함수를 만들려고 노력하자.
+- 반복은 되지 않더라도 하나의 기능이 너무 복잡하면 함수를 만들려고 노력하자.
+- 복잡하지는 않는데 코드가 너무 길어지면 함수로 묶어주려고 노력하자.
+- 실행의 결과가 그때 그때 다른 경우에도 함수를 만들자.
+
+```js
+// 함수만들기(함수선언)
+function 적절한동사() {
+  // 하고 싶은 일 작성 ....
+}
+// 함수작성하기(함수호출)
+적절한동사();
+// 예 (함수 체이닝)
+fetch().then().then().catch();
+``` 
+
+- 함수는 무조건 1개의 값을 리턴하도록 규정되어 있습니다.
+- 리턴이라는 것은 함수 실행 후 값을 돌려주는 것을 말합니다.
+
+```js
+function 함수명() {
+  // 몰래 작성됨 return undefined; 
+}
+함수명();
+```
+
