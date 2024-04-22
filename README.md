@@ -537,3 +537,87 @@ function 나누기 (_num1, mum2) {
 나누기(a, b);
 ```
 
+# 함수의 이해 7번
+
+1. 함수를 만들어야겠다고 판단하는 케이스
+
+- 동일한 코드가 2번 이상 반복되면 함수를 만들려고 노력하자.
+- 반복은 되지 않더라도 하나의 기능이 너무 복잡하면 함수를 만들려고 노력하자.
+- 복잡하지는 않는데 코드가 너무 길어지면 함수로 묶어주려고 노력하자.
+- 실행의 결과가 그때, 그때 다른 경우에도 함수를 만들자.
+
+2. 왜 화살표 함수를 만드는가
+
+- 트렌드 추적
+- this를 정확히 지정하기 위해서 활용한다.
+- 코드가 해석하기 더 어려워집니다.
+
+
+: 매개 변수가 있는 경우
+```js
+function say(_who) {
+  console.log("안녕", _who, this);
+}
+```
+
+: step 1.
+```js
+say(_who) => {
+  console.log("안녕", this);
+}
+```
+
+: step 2.
+```js
+const say = (_who) => {
+  console.log("안녕", this);
+}
+```
+
+- this를 정확히 지정하기 위해서 활용한다.
+: 화살표 함수를 사용하면 일반적으로 큰 고민 사용하면 됩니다.
+: 하지만 함수 안에 this를 작성하시면 상황이 달라집니다.
+: 화살표 함수에서 this는 window를 가르킵니다.
+: 결론은 화살표 함수에서 this를 사용한다면 console.log(this) 확인 필수!
+: 화살표 함수는 예전 일반 함수에서 window 를 참조하지 못하는 문제를 해결함.
+
+```js
+// this 의 차이
+  const btWrap = document.querySelector(".bt-wrap");
+  btWrap.addEventListener("click", function () {
+    console.log(this);
+  });
+  btWrap.addEventListener("click", () => {
+    console.log(this);
+  });
+```
+
+# 배열의 이해
+
+- [요소, 요소, 요소, 요소]
+ : 요소를 담을 수 있는 자료형은 7가지 입니다.
+- 배열의 속성(배열을 위한 특별한 변수)은 1개가 있습니다.
+ : length 가 있어요. (요소의 개수)
+- 배열의 메소드(배열을 위한 특별한 함수)는 너무 많아요.
+- 상당히 많은 메소드(배열을 위한 함수)가 있습니다.
+- 배열.forEach((요소)=>{}), 배열.map((요소)=>{}), 배열.filter((요소)=>{}), 배열.find((요소)=>{})
+- 배열의 요소를 하나씩 접근해서 활용하기
+- 카멜케이스 (배열.forEach( ) )
+
+```js
+// 배열이라면 반복하자.
+result.forEach((item) => {
+  const tag = `<a href=${item.link} class="list-box">
+    <div class="list-box-img br-20" style="background: url('./images/${item.imgpath}') no-repeat center; background-size: cover"></div>
+    <div class="list-box-cate">
+      <img src="./images/icon/${item.icon}" alt="${item.category}" />
+          <span style="color:${item.txtcolor};">${item.category}</span>
+    </div>
+    <p class="list-box-title">${item.title}</p>
+      <span class="list-box-day">${item.day}</span>
+    </a>`;
+  allTag = allTag + tag;
+});
+```
+
+
