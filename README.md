@@ -949,26 +949,30 @@ operator (연산자)
 ```txt
 함수의 리턴 ?
 
-골치아프지만 그래도 일단 알아는 둡시다.
+     골치아프지만 그래도 일단 알아는 둡시다.
 
-1. 함수 정의
-function 함수이름(매개변수) {
-}
+    1. 함수 정의
+     function 함수이름(매개변수) {
+     }
 
-2. 함수 호출
-const gogo = 함수이름(100); // gogo 에는 undefined;
+    2. 함수 호출
+     const gogo = 함수이름(100); // gogo 에는 undefined;
 
-3. 리턴이 여러개인 경우
+    3. 리턴이 여러개인 경우
 
-: return 의 의미는 함수 결과값 돌려주기
-: return 은 함수 종료하기
+    : return 의 의미는 함수 결과값 돌려주기
+    : return 은 함수 종료하기
 
-function 함수이름(매개변수) {
-return 1;
-return 2; // 영원히 실행이 안됨.
-}
+     function 함수이름(매개변수) {
+        return 1;
+        return 2; // 영원히 실행이 안됨.
+     }
+
 ```
 
+# JS 8장
+
+```txt
 제어문은 조건에 따라서 코드 진행 방향이 결정된다
 
     고차함수 란 ? 함수의 매개변수로 함수를 전달한다.
@@ -1006,19 +1010,22 @@ return 2; // 영원히 실행이 안됨.
            console.log("안녕 ^^")
     }
 
-> 반복을 대체할 수 있는 다양한 기능\*
-
+> 반복을 대체할 수 있는 다양한 기능*
+>
 - forEach 메서드 : 배열을 순회할 때 사용
-  [1,2,3]
+    [1,2,3]
 
 - for in 문 : 객체의 프로퍼티를 열거할 때 사용
-  {
-  age: 1,
-  marry: false,
-  nicName: "Chlie"
-  }
+    {
+      age: 1,
+      marry: false,
+      nicName: "Chlie"
+    }
 
 - for of 문 : 이터러블(itrable : 순서가 있는)을 순회 가능
+
+
+```
 
 # JS 9장
 
@@ -1203,4 +1210,169 @@ const result = "안녕" ?? "없군요"    결과값은 "안녕"
 # 카카오 브레인 블로그 사이트
 
 - 반드시 저작권을 밝혀야 한다.
-- 첫 화면만 연습하면 됩니다. (첫 화면이 가장 난이도가 높다)
+- 첫 화면만 연습 하면 됩니다. (첫 화면이 가장 난이도가 높다)
+- 리액트 작업
+
+# js 10장
+
+```txt
+일반 변수는 값이 보관되고    값이 복사된다.
+
+    객체 변수는 주소가 보관되고 주소가 복사된다.
+    : 중요한 것은 객체를 복사하는 것은 주의하자. (얕은복사)
+    : 가능하면 객체는 깊은 복사를 활용하도록 노력하자.
+```
+
+# 깃 협업 (반드시 순서를 꼭! 지켜주세요.)
+
+# JS 12 장
+
+```txt
+원시 데이터        ===> 단일 값
+복합 데이터 : 복잡한 속성, 메서드를 가진 객체 ===> function, [], {}.
+
+함수는 객체 의 문법을 따르는 값이다.
+
+
+    function 함수이름(매개 변수) {
+      return 문장을 작성 (값을 반드시 출력 : 표현식!!)
+    }
+
+    함수이름(인자)  :  함수 호출, 함수 실행, 함수 콜..
+
+
+    리터럴은 JS 가  알아먹을 수 있는 데이터 형태로 작성한 것
+    const a   = 1;             숫자 리터럴
+    const add = function() {} ; 함수 리터럴
+
+
+    const 더하기 =  function (){
+    }
+    console.log(더하기)  ???
+
+
+    JS 의 일급객체에 대해서 말해 보시오.
+
+    1. 값처럼 변수에 할당할 수 있는가?
+      const add = function() {}
+
+    2. 객체의 프로퍼티의 값으로 담을 수 있는가?
+      const obj = { add : function(){}}
+
+    3. 배열의 값으로 담을 수 있는가?
+       const arr = [1, 2, 3, 4, function(){}, {}, [] ]
+
+    4. 함수의 매개변수 값으로 전달할 수 있는가?
+       function 말해봐(기능) {
+           기능();
+       }
+
+       const 안녕 = function(){
+        console.log("안녕하세요")
+       }
+       말해봐(안녕)
+
+
+       말해봐( function(){ console.log("반가워요") } )
+
+   - 함수가  객체를 생성하는 함수를 객체 생성자 함수 라고 합니다.
+
+   - JS 의 함수에 전달되는 매개변수 목록을 arguments 라는 객체 라고 한다.
+
+   - 함수의 매개변수로
+
+     1. 원시 값을 인자로 전달하는 경우
+
+     const age = 15;
+     function grow( _value ) {
+         return _value + 5;
+     }
+
+     grow(age);
+
+     age 는 변화가 없다.
+
+
+     2. 객체를 인자로 전달하는 경우 (정말 조심해야 해요)
+     const person = { age: 10 }
+
+     function growObject(_who) {
+         _who.age = 150;
+     }
+
+     // 객체의 참조(주소) 값 전달
+     growObject(person);
+
+     // 객체의 상태가 변경이 일어난다.
+
+
+
+     - 중첩 함수
+
+        function Outer (){
+
+            const handelClick = () => {
+
+            }
+
+            handelClick();
+
+            return ( JSX 구문)
+        }
+
+     - 콜백 함수
+
+        window.addEventListener( "이벤트글자", function(){ } )
+
+
+     - 순수 함수
+       function add(a, b) {
+          return a + b;
+       }
+
+     - 비순수 함수
+        const age = 10;
+       function add( b) {
+          return age + b;
+       }
+```
+
+# Git 협업 과정
+
+```txt
+
+
+   - 팀원은 PC 에서 브랜치를 생성한다. !!!!!!
+     git branch 아이디
+
+   - 팀원은 PC 에서 브랜치로 이동한다.
+      git switch 아이디
+
+   - 리액트 프로젝트라서 js 소스들을 다운로드 및 설치 하셔야 해요
+      npm i
+
+   - 팀원은 PC 에서 작업하고
+      git add .
+      git commit
+      git push 아이디
+
+   - 팀원은 GitHub 에서 브랜치 확인 후 pull Request 요청한다.
+
+   - 팀원은 대기한다.
+
+   - 팀장은 pull Request 요청을 처리한다.
+
+   - 팀장은 요청에 대해 처리후 feedback (슬랙) 준다.
+
+   - 팀장이 소스 merge 끝났습니다. sync 받으셔요.
+
+   - 팀원은 본인 깃허브 sync fork 클릭합니다.
+
+   - 팀원은 작업 brach 제거한다.
+     : git switch main
+     : git branch -D 아이디
+
+   - 팀원은 sync 이후에 소스를 다시 받는다.
+     : git fetch
+     : git merge origin/main
+```
