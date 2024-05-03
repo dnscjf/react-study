@@ -125,3 +125,46 @@ const 사용하실 때 오해의 소지가 있는 경우
   : `yarn --version`
 - favicon 만들기 (디자이너 담당)
   : https://realfavicongenerator.net/
+
+- ::before, ::after 샘플
+
+```html
+<body>
+  <style>
+    .wrap {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background: goldenrod;
+      margin: 100px auto;
+      padding: 50px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 100px auto;
+      background: hotpink;
+      text-align: center;
+    }
+    .box span::before {
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: red;
+    }
+    .box span::after {
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: blue;
+    }
+  </style>
+  <div class="wrap">
+    <div class="box">
+      <span>안녕</span>
+    </div>
+  </div>
+</body>
+```
