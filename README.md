@@ -168,3 +168,61 @@ const 사용하실 때 오해의 소지가 있는 경우
   </div>
 </body>
 ```
+
+## React useState 정리
+
+```txt
+
+ 모든 hook 들은 컴포넌트 js 의 첫번째 영역에 배치를 하자!
+
+ hook ?
+
+ 일반 변수는 값이 바뀌어도 재렌더링 없음
+ 리액트 변수는 값이 바뀌면 재 렌더링 되므로 화면 반영
+
+
+  1. 리액트용 변수 즉, useState 는 재 렌더링시 표현된다.
+
+  2. 리액트용 변수 즉, useState 는 컴포넌트에서만 작성할 수 있습니다.
+
+  3. useState 는 비동기이므로 즉시 참조할 수 가 없다.
+
+  4. useState 에 직접 값을 변경할 수 없다.
+     const [age, setAge] = useState(0);
+     age = 100; (X)
+
+  5. useState 에서 현재값을 참조하고
+     즉시 갱신을 하려면 함수를 활용하여 업데이트 한다.
+
+     const [age, setAge] = useState(0);
+     setAge(age++); // 1 이 되지 않는다. 즉, 즉시 갱신 되지 않는다.
+     console.log(age);
+     // 우리는 1증가한 값을 기대하였다. 하지만 값은 옛날거 유지
+     // 함수가 종료되면 그때 업데이트 된다.
+
+
+       const [isOpen, setIsOpen] = useState(false);
+
+       const clickMbbt = () => {
+
+         const now = !isOpen;
+         setIsOpen(now);
+
+         //     즉시 갱신을 하려면 함수를 활용하여 업데이트 한다.
+
+         // setIsOpen((prev) => {
+         //   return !prev;
+         // });
+
+       };
+
+
+   6. useState 에서 기존 값 참조 후
+      직접 값 갱신 리턴 받아서 바로 사용하고 싶다.
+
+     const [age, setAge] = useState(0);
+     setAge(age++) ; // 기존 방식 (새로운 값 안나옴)
+
+     setAge( 이전값 => { return 새로운값 }  ) // 함수 방식(새로운 값 나옴)
+     setAge( prev => { return prev+1 }  ) // 함수 방식(새로운 값 나옴)
+```
