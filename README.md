@@ -304,3 +304,126 @@ btTag.onclick = 함수명;
     쓰기
   </button>
 ```
+
+# 25장 클래스
+
+```txt
+ : 단어에 대한 정의가 있으시면 이해가 좀 편합니다.
+
+ : 인스턴스, 객체, 프로퍼티, 메소드 를 단어에 대한 이해가 필요
+
+ : 문법에 제시되는 클래스라는 것을 현업에서 많이 쓰는가요?
+	- 외부 소스 활용시 참조가 필요해요.
+
+ : 다른 프로그래밍을 배우신 분들이 js 에 적응하라고 나온 문법
+
+1. 객체 생성 함수 와 클래스를 같이 비교하면 이해가 편합니다.
+
+ 1.1. 객체 생성자 함수
+
+     객체      :  인스턴스
+     생성자    :  constructor () { }   // 고정된 이름
+     함수      :  class
+
+    - 객체 생성자 함수
+     function Person(){ }
+     const a = new Person();
+
+    - class Person {}
+      const a = mew Person();
+
+2. 클래스와 생성자 함수의 차이점
+
+ 2.1. 클래스는 new 연산자 없이 호출하면 에러 발생.
+   생성자 함수는 new 연산자 없이 호출하면 일반 함수로서 호출된다.
+
+   function Go(){}   new Go();  Go();
+   class Go {}       Go(); 에러
+
+ 2.2. 클래스는 extends와 super 키워드로 상속 가능.
+   생성자 함수는 extends와 super 키워드를 지원하지 않는다.
+
+   function  강아지() extends 동물
+   {
+       super(); // 에러
+   }
+
+   class 강아지 extends 동물 {
+       constructor() {
+         super();
+       }
+   }
+
+
+ 2.3. 클래스는 호이스팅이 발생하지 않는 것처럼 동작하고,
+
+   const a = new 강아지();
+
+   class 강아지 {}
+
+  함수 선언문으로 정의된 생성자 함수는 함수 호이스팅이,
+
+    const go = new 강아지();
+    function 강아지() {}
+
+  함수 표현식으로 정의한 생성자 함수는 변수 호이스팅이 발생한다.
+
+  const 강아지 = function() {}
+  const go = new 강아지();
+
+
+ 2.4. 클래스 내부에는 자동으로 strict mode가 지정되며 해제할 수 없다.
+   생성자 함수는 직접 지정해 줘야한다.
+
+ 2.5. 클래스의 constructor, 프로토타입 메서드, 정적 메서드는 모두 열거되지 않는다.(`[[Enumerable]]`⇒`false`)
+
+
+ 3. 클래스에서 정의한 메소드의 특징
+
+	class Person {
+		// new Person() 하면 자동실행되는 메서드 : 인스턴스 생성자 함수
+		constructor() {
+			// return this;	// new 해서 만들어진 인스턴스를 리턴합니다.
+		}
+
+		// 일반 메소드
+		sayHi() {}
+		sayBye() {}
+
+		// 클래스 메소드로서 Person.go() : 반드시 클래스명을 적고 실행
+		static go() {}
+
+	}
+
+
+4. 접근제한자
+
+	private	속성		: 	외부에서 읽기, 쓰기, 변경 안됨
+	public	속성		: 	외부에서 읽기, 쓰기, 변경이 가능
+	protected 속성	: 	허락된 환경만 읽기, 쓰기, 변경이 가능
+
+
+5. 접근자 프로퍼티
+
+	class Person = {
+		// 클래스 필드 : 클래스에 정의한 속성
+		# firstName: "ungmo",
+		get fullName() {
+			return this.firstName;
+		}
+
+		set fullName(ha) {
+			this.firstName = ha
+		}
+	}
+
+	const go = new Person();
+	go.fullName;
+	go.fullName = "홍길동";
+
+
+6. 상속에 의한 클래스 확장 ( extends )
+	: 오로지 class에만 작성 가능
+	: 속성과 메소드 상속
+	: 자기만의 속성과 메소드 정의로 확장
+```
