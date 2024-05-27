@@ -548,3 +548,7 @@ btTag.onclick = 함수명;
 
 	- [1,2,3,4].reduce( (acc, cur, index, arr) => acc + cur,	0 )
 ```
+
+# Swiper 적용
+
+: (Swiper)[[https://swiperjs.com/demos]]
