@@ -58,8 +58,8 @@ useEffect(() => {
 # JS 14 장
 
 ```txt
-// var : 값을 담을 공간을 마련해줘.....
-  // var 이름 : 값을 담은 공간에 꼬리표를 붙여줘.
+// var : 값을 담을 공간을 마련한다.
+  // var 이름 : 값을 담은 공간에 꼬리표를 붙인다.
   var age = 15;
   var nickName = "hong";
   function go(){
@@ -69,7 +69,7 @@ useEffect(() => {
 
   모듈(기능별 파일코드)은 import/export 문법을 써서 변수 범위를 설정한다.
 
- class 장을 보아야 해요.
+ class 장을 보아야 한다.
 
   외부에서 변수 및 함수에 접근할 수 있는 권한
   public    : 외부 어떤 곳에서도 사용할 수 있다.
