@@ -101,8 +101,8 @@
   : Delete (DELETE)
 - Postman (웹 API 테스트시 일반적 사용)
 - Swagger (웹 API 테스트시 별도로 BE에서 셋팅)
-- Web Browser (웹 프로젝트 CORS 에러 발생 함)
-  : package.json 에 "proxy":"주소" 를 작성해야 한다.
+- Web Browser (웹 프로젝트 CORS 에러 발생함)
+  : package.json 에 "proxy":"주소" 를 작성해야한다.
 
 ## 8. Axios 활용
 
