@@ -1,0 +1,63 @@
+.main {
+}
+.main .inner {
+  height: auto;
+}
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+.main-top-slide {
+  width: 65.81%;
+  max-width: 770px;
+
+  height: 40.17vw;
+  max-height: 470px;
+
+  overflow: hidden;
+}
+.main-top-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/b1.png") no-repeat center;
+  background-size: cover;
+}
+
+.main-top-banner {
+  width: 31.62%;
+  max-width: 370px;
+
+  height: 40.17vw;
+  max-height: 470px;
+
+  overflow: hidden;
+}
+
+.main-top-banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/br.png") no-repeat center;
+  background-size: cover;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .main-top-slide {
+    width: 100%;
+    max-width: 100%;
+
+    height: 100vw;
+    max-height: 1240px;
+  }
+
+  .main-top-banner {
+    display: none;
+  }
+}
+
+.main-bottom {
+}
