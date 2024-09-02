@@ -37,7 +37,7 @@
 
 # Swiper Slide 적용해 보기
 
-- Slide 를 직접 코딩하지 마세요.
+- Slide 를 직접 코딩하지 않아야 합니다.
 - 사용법을 배운다.
 - Swiper(https://swiperjs.com/), Slick(https://kenwheeler.github.io/slick/), BxSlider(https://bxslider.com/) 가 있어요.
 
@@ -58,7 +58,7 @@ window.addEventListener("load", function () {
   mp3  실행하려면? mp3 Player
   .hwp 실행하려면? 한글 Player
 
-   javaScript 뭐지 ?
+   javaScript?
 
 
    publisher : 웹브라우저용 프로그래밍 언어 (html, css 다룬다)
