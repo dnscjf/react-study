@@ -39,7 +39,7 @@ const swiperOption = {
   autoplay: { delay: 1000, disableOnInteraction: false },
   modules: [EffectFade, Autoplay],
   onInit: (swiper) => {
-    // 매개변수 swiper 는 현재 생성된 슬라이드를 말함.
+    // 매개변수 swiper 는 현재 생성된 슬라이드를 말함
     swiper.autoplay.stop();
     swLogoSlide.current = swiper;
   },
